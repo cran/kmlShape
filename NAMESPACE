@@ -1,0 +1,28 @@
+#useDynLib(kmlShape)
+
+export(
+       ## distFrechet
+       #"distTraj",
+    "cldsWide","cldsLong",
+    "distFrechet","pathFrechet","distFrechetR","distFrechetRec",
+    "meanFrechet2","meanFrechet","matplotLong",#"shapeCriterion",
+    "plotSenators","parKmlShape",
+
+       ## Reducing the number of individual
+       #"reduceNbIdLong","reduceNbTimesWide",
+    "reduceNbId",
+    "DouglasPeuckerNbPoints","DouglasPeuckerEpsilon","reduceNbTimes","reduceTraj",
+    "kmlShape"
+)
+
+exportMethods(
+    "plotTraj","plot"
+)
+
+exportClasses(
+              "Clds","ParKmlShape"
+)
+
+import(longitudinalData,class,kml,methods,lattice)     # dtw for shapeCriterion
+importFrom("graphics", "legend", "lines", "matplot")
+importFrom("stats", "as.dist", "dist", "hclust", "kmeans","smooth.spline")
